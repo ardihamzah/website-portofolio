@@ -1,0 +1,201 @@
+<svg id="robot-svg-el" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060608"/>
+      <stop offset="50%" stop-color="#121218"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+
+    <!-- Dark Matte Black / Gunmetal Metallic Robot Body -->
+    <linearGradient id="robot-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a3a48"/>
+      <stop offset="40%" stop-color="#22222e"/>
+      <stop offset="80%" stop-color="#14141d"/>
+      <stop offset="100%" stop-color="#09090e"/>
+    </linearGradient>
+
+    <linearGradient id="robot-head-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a4a5a"/>
+      <stop offset="50%" stop-color="#262634"/>
+      <stop offset="100%" stop-color="#101017"/>
+    </linearGradient>
+
+    <linearGradient id="visor-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff2a4b"/>
+      <stop offset="50%" stop-color="#ff7700"/>
+      <stop offset="100%" stop-color="#ff2a4b"/>
+    </linearGradient>
+
+    <linearGradient id="screen-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255, 42, 75, 0.12)"/>
+      <stop offset="100%" stop-color="rgba(255, 119, 0, 0.04)"/>
+    </linearGradient>
+
+    <filter id="red-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#ff2a4b" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <style>
+    .glow-line {
+      stroke-dasharray: 10 15;
+      animation: dashScroll 4s linear infinite;
+    }
+    .code-line-1 { animation: typeLine 2s ease-in-out infinite alternate; }
+    .robot-head { animation: floatHead 3s ease-in-out infinite alternate; }
+    .robot-arm-left { animation: typeArmLeft 0.3s ease-in-out infinite alternate; }
+    .robot-arm-right { animation: typeArmRight 0.35s ease-in-out infinite alternate; }
+    .visor-eye { animation: blinkVisor 4s ease-in-out infinite; }
+    .pulse-dot { animation: pulseGlow 1.5s ease-in-out infinite alternate; }
+    .matrix-text { font-family: monospace; font-size: 11px; fill: #ff4d6d; opacity: 0.85; }
+
+    /* Battle Mode Styles */
+    .angry-eyes { display: none; }
+    .normal-eyes { display: block; }
+    .battle-aura { display: none; opacity: 0; transition: opacity 0.3s; }
+
+    .angry .normal-eyes { display: none; }
+    .angry .angry-eyes { display: block; }
+    .angry .battle-aura { display: block; opacity: 1; }
+    .angry .pulse-dot { fill: #ff0033 !important; animation: angryPulse 0.2s infinite alternate; }
+
+    @keyframes floatHead {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-8px); }
+    }
+    @keyframes typeArmLeft {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(-5deg) translateY(-2px); }
+    }
+    @keyframes typeArmRight {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(6deg) translateY(-3px); }
+    }
+    @keyframes dashScroll {
+      from { stroke-dashoffset: 50; }
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes blinkVisor {
+      0%, 94%, 100% { opacity: 1; transform: scaleY(1); }
+      97% { opacity: 0.2; transform: scaleY(0.1); }
+    }
+    @keyframes pulseGlow {
+      0% { opacity: 0.4; }
+      100% { opacity: 1; filter: drop-shadow(0 0 8px #ff2a4b); }
+    }
+    @keyframes angryPulse {
+      0% { opacity: 0.6; filter: drop-shadow(0 0 4px #ff0000); }
+      100% { opacity: 1; filter: drop-shadow(0 0 16px #ff0000); }
+    }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="500" fill="url(#bg-grad)"/>
+
+  <!-- Red Battle Warning Aura -->
+  <circle cx="400" cy="250" r="280" fill="radial-gradient(circle, rgba(255,0,50,0.2) 0%, transparent 70%)" class="battle-aura"/>
+
+  <!-- Cyber Grid Lines (Dark Red/Gray) -->
+  <g opacity="0.12" stroke="#ff2a4b" stroke-width="1">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="160" y1="0" x2="160" y2="500"/>
+    <line x1="320" y1="0" x2="320" y2="500"/>
+    <line x1="480" y1="0" x2="480" y2="500"/>
+    <line x1="640" y1="0" x2="640" y2="500"/>
+  </g>
+
+  <!-- Background Code Screens -->
+  <rect x="50" y="60" width="300" height="180" rx="8" fill="url(#screen-grad)" stroke="rgba(255, 42, 75, 0.3)" stroke-width="1.5"/>
+  <path d="M 65 90 L 330 90 M 65 110 L 280 110 M 65 130 L 310 130 M 65 150 L 240 150 M 65 170 L 290 170 M 65 190 L 200 190" stroke="#ff4d6d" stroke-width="3" stroke-linecap="round" class="code-line-1" opacity="0.8"/>
+  <text x="65" y="215" class="matrix-text">&lt;dev&gt; Dark Chrome Core... &lt;/dev&gt;</text>
+
+  <rect x="450" y="80" width="300" height="200" rx="8" fill="url(#screen-grad)" stroke="rgba(255, 119, 0, 0.3)" stroke-width="1.5"/>
+  <rect x="470" y="100" width="260" height="20" rx="4" fill="rgba(255,255,255,0.08)"/>
+  <rect x="470" y="130" width="120" height="60" rx="4" fill="rgba(255, 42, 75, 0.2)"/>
+  <rect x="600" y="130" width="130" height="15" rx="3" fill="rgba(255,255,255,0.12)"/>
+  <rect x="600" y="152" width="100" height="10" rx="2" fill="rgba(255,255,255,0.08)"/>
+  <rect x="600" y="168" width="115" height="10" rx="2" fill="rgba(255,255,255,0.08)"/>
+  <rect x="470" y="200" width="260" height="30" rx="4" fill="rgba(255, 119, 0, 0.2)"/>
+
+  <!-- Holographic Floating Keyboard -->
+  <ellipse cx="400" cy="410" rx="220" ry="40" fill="none" stroke="#ff2a4b" stroke-width="2" opacity="0.5" class="glow-line"/>
+  <ellipse cx="400" cy="410" rx="180" ry="30" fill="rgba(255, 42, 75, 0.08)" stroke="#ff7700" stroke-width="1"/>
+  <g fill="#ff4d6d" opacity="0.7">
+    <circle cx="300" cy="400" r="2.5"/><circle cx="330" cy="400" r="2.5"/><circle cx="360" cy="400" r="2.5"/><circle cx="390" cy="400" r="2.5"/><circle cx="420" cy="400" r="2.5"/><circle cx="450" cy="400" r="2.5"/><circle cx="480" cy="400" r="2.5"/><circle cx="510" cy="400" r="2.5"/>
+    <circle cx="315" cy="412" r="2.5"/><circle cx="345" cy="412" r="2.5"/><circle cx="375" cy="412" r="2.5"/><circle cx="405" cy="412" r="2.5"/><circle cx="435" cy="412" r="2.5"/><circle cx="465" cy="412" r="2.5"/><circle cx="495" cy="412" r="2.5"/>
+  </g>
+
+  <!-- DARK METALLIC ROBOT CHARACTER -->
+  <g filter="url(#soft-shadow)" id="robot-main-group">
+    
+    <!-- Robot Head Group -->
+    <g class="robot-head" transform-origin="400 200">
+      <!-- Antenna -->
+      <line x1="400" y1="130" x2="400" y2="90" stroke="#4a4a5a" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="400" cy="84" r="8" fill="#ff2a4b" class="pulse-dot"/>
+      
+      <!-- Head Base -->
+      <rect x="330" y="130" width="140" height="105" rx="30" fill="url(#robot-head-grad)" stroke="#666677" stroke-width="2"/>
+      
+      <!-- Visor Screen -->
+      <rect x="345" y="148" width="110" height="55" rx="18" fill="#08080c" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+      <rect x="350" y="152" width="100" height="47" rx="14" fill="url(#visor-grad)" class="visor-eye" opacity="0.95"/>
+      
+      <!-- Normal Visor Eyes -->
+      <g class="normal-eyes">
+        <circle cx="380" cy="175" r="7" fill="#ffffff"/>
+        <circle cx="420" cy="175" r="7" fill="#ffffff"/>
+        <circle cx="382" cy="173" r="2.5" fill="#000000"/>
+        <circle cx="422" cy="173" r="2.5" fill="#000000"/>
+      </g>
+
+      <!-- Angry Visor Eyes (During Battle Mode) -->
+      <g class="angry-eyes">
+        <path d="M 370 168 L 390 182" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 430 168 L 410 182" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+      </g>
+
+    </g>
+
+    <!-- Robot Body / Torso (Gunmetal Black) -->
+    <path d="M 340 245 C 340 235, 460 235, 460 245 L 475 360 C 475 375, 325 375, 325 360 Z" fill="url(#robot-body)" stroke="#555566" stroke-width="2"/>
+    
+    <!-- Chest Core Reactor -->
+    <circle cx="400" cy="290" r="22" fill="#060608" stroke="#ff2a4b" stroke-width="2"/>
+    <circle cx="400" cy="290" r="14" fill="#ff2a4b" class="pulse-dot"/>
+    <polygon points="400,280 408,295 392,295" fill="#ffffff"/>
+
+    <!-- Left Arm Typing -->
+    <g class="robot-arm-left" transform-origin="330 255">
+      <path d="M 330 255 Q 290 290 320 370" fill="none" stroke="url(#robot-body)" stroke-width="18" stroke-linecap="round"/>
+      <circle cx="320" cy="370" r="11" fill="#ff2a4b"/>
+    </g>
+
+    <!-- Right Arm Typing -->
+    <g class="robot-arm-right" transform-origin="470 255">
+      <path d="M 470 255 Q 510 290 480 370" fill="none" stroke="url(#robot-body)" stroke-width="18" stroke-linecap="round"/>
+      <circle cx="480" cy="370" r="11" fill="#ff7700"/>
+    </g>
+
+  </g>
+
+  <!-- Code Particles -->
+  <g fill="#ff4d6d" font-family="monospace" font-size="12" font-weight="bold" opacity="0.7">
+    <text x="180" y="320">&lt;/&gt;</text>
+    <text x="620" y="350">CSS3</text>
+    <text x="210" y="440">JS</text>
+    <text x="580" y="420">WordPress</text>
+  </g>
+</svg>

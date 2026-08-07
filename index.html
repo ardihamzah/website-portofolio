@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RUDI ARDI HAMZAH — Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Scroll Animation Canvas -->
+  <canvas id="scroll-canvas"></canvas>
+
+  <!-- Preloader -->
+  <div id="loader" class="loader-container">
+    <div class="loader-spinner"></div>
+    <div id="loader-text" class="loader-text">0%</div>
+  </div>
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scroll-progress-bar" class="scroll-progress-bar"></div>
+
+  <!-- Main Content Wrapper -->
+  <div class="content-wrapper">
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+      <div class="logo">RUDI.</div>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="active">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#experience">EXPERIENCE</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#services">SERVICES</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+
+      <div class="nav-right-group">
+        <a href="./assets/CV_RUDI_ARDI_HAMZAH.pdf" download="CV_RUDI_ARDI_HAMZAH.pdf" target="_blank" class="btn-download-cv">
+          <span>DOWNLOAD CV</span>
+          <span class="icon">&DownArrow;</span>
+        </a>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-sidebar-left">
+        <span class="vertical-tag">BASED IN INDONESIA</span>
+      </div>
+
+      <div class="hero-main-content">
+        <span class="greeting-tag">HELLO, I'M</span>
+        <h1 class="giant-name">RUDI ARDI HAMZAH</h1>
+
+        <div class="roles-list">
+          <h2>WEB DEVELOPER</h2>
+          <h2>UI DESIGNER</h2>
+          <h2>CREATIVE TECHNOLOGIST</h2>
+        </div>
+
+        <p class="hero-bio">
+          I build digital experiences<br>that are fast, modern and impactful.
+        </p>
+
+        <a href="#projects" class="btn-explore-portfolio btn-pill-blue">
+          <span>EXPLORE PORTFOLIO</span>
+          <span class="arrow">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="hero-sidebar-right">
+        <div class="freelance-status-pill">
+          <span>AVAILABLE FOR FREELANCE</span>
+          <span class="green-dot"></span>
+        </div>
+
+        <div class="vertical-socials">
+          <a href="#" title="GitHub">🐙</a>
+          <a href="#" title="Behance">Bē</a>
+          <a href="#" title="LinkedIn">in</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="Email">✉</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Row 2: ABOUT ME & EXPERIENCE GRID -->
+    <div class="row-2-container">
+
+      <!-- Section: ABOUT ME -->
+      <section id="about" class="card-box about-me-card">
+        <div class="card-title-row">
+          <h3>
+            <svg class="title-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            ABOUT ME
+          </h3>
+          <span class="plus-symbol">+</span>
+        </div>
+
+        <div class="about-media-box">
+          <div class="dark-photo-graphic">
+            <span class="dev-tag">&lt;RUDI /&gt;</span>
+          </div>
+        </div>
+
+        <p class="about-desc">
+          Saya adalah seorang Web Developer dan UI Designer yang berfokus pada pembuatan website modern, cepat, dan user-friendly. Saya menggabungkan desain yang elegan dengan teknologi yang efisien untuk menghasilkan solusi digital yang berdampak.
+        </p>
+
+        <div class="about-stats-grid">
+          <div class="stat-col">
+            <span class="stat-icon">&lt;/&gt;</span>
+            <span class="stat-num">35+</span>
+            <span class="stat-sub">PROJECTS COMPLETED</span>
+          </div>
+          <div class="stat-col">
+            <span class="stat-icon">😊</span>
+            <span class="stat-num">15+</span>
+            <span class="stat-sub">HAPPY CLIENTS</span>
+          </div>
+          <div class="stat-col">
+            <span class="stat-icon">🎖️</span>
+            <span class="stat-num">5+</span>
+            <span class="stat-sub">YEARS EXPERIENCE</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: EXPERIENCE -->
+      <section id="experience" class="card-box experience-card">
+        <div class="card-title-row">
+          <h3>EXPERIENCE & CAREER</h3>
+          <span class="plus-symbol">+</span>
+        </div>
+
+        <div class="timeline-list">
+          <div class="timeline-item">
+            <div class="timeline-badge">2025 – 2026</div>
+            <div class="timeline-content">
+              <div class="role-row">
+                <h4 class="timeline-role">STAFF MEDIA / MEDIA OFFICER</h4>
+                <span class="company-tag">PT TITO DIGITAL KREASI</span>
+              </div>
+              <p class="timeline-desc">Membuat & mengembangkan konten kreatif media sosial (Instagram & TikTok), merancang strategi konten, serta menganalisis engagement audiens. Berhasil meningkatkan engagement rate sebesar 25% & menjangkau 10.000+ audiens baru.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-badge">2023 – 2024</div>
+            <div class="timeline-content">
+              <div class="role-row">
+                <h4 class="timeline-role">ADMIN & WEB DEVELOPER</h4>
+                <span class="company-tag">PT. JOLOTUNDO PRIMA NUSANTARA</span>
+              </div>
+              <p class="timeline-desc">Mengelola & mengembangkan website perusahaan berbasis WordPress, kustomisasi fungsi & tampilan website, serta menyusun dokumentasi teknis. Berhasil meningkatkan kepuasan pengguna hingga 95%.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-badge">2022 – 2023</div>
+            <div class="timeline-content">
+              <div class="role-row">
+                <h4 class="timeline-role">ADMIN WEBSITE & WEBSITE BUILDER</h4>
+                <span class="company-tag">PT. INTENSIF BOOKS INDONESIA</span>
+              </div>
+              <p class="timeline-desc">Instalasi, konfigurasi, & kustomisasi tema serta plugin WordPress, manajemen user access, backup & keamanan web. Berhasil meningkatkan kecepatan loading website hingga 40%.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-badge">2021</div>
+            <div class="timeline-content">
+              <div class="role-row">
+                <h4 class="timeline-role">ADMIN WEBSITE</h4>
+                <span class="company-tag">CV. ALY FARM</span>
+              </div>
+              <p class="timeline-desc">Mengembangkan & memperbarui konten website berbasis WordPress, kustomisasi plugin, serta menangani dukungan pelanggan. Mempertahankan uptime website 99.9% & meningkatkan response rate 40%.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Section: SELECTED PROJECTS (Portofolio Grid) -->
+    <section id="projects" class="card-box selected-projects-card">
+      <div class="card-title-row">
+        <h3>
+          <svg class="title-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          SELECTED PROJECTS & PORTFOLIO
+        </h3>
+        <span class="click-hint">Click item to view details &rarr;</span>
+      </div>
+
+      <div id="portfolio-grid" class="horizontal-projects-slider">
+        <!-- Populated dynamically via JS -->
+      </div>
+    </section>
+
+    <!-- Row 3: SKILLS | SERVICES -->
+    <section id="services" class="row-3-section">
+
+      <!-- Column 1: SKILLS -->
+      <div class="card-box skills-card">
+        <div class="card-title-row">
+          <h3>SKILLS</h3>
+          <span class="plus-symbol">+</span>
+        </div>
+
+        <div class="skills-columns-grid">
+          <div class="skill-category">
+            <h4 class="skill-cat-title">WEBSITE</h4>
+            <ul>
+              <li>Website Administration</li>
+              <li>Website Builder</li>
+              <li>Website Content Management</li>
+              <li>Website Maintenance</li>
+              <li>User Access Management</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h4 class="skill-cat-title">ADMINISTRATION</h4>
+            <ul>
+              <li>Data Entry</li>
+              <li>Data Verification</li>
+              <li>Document Management</li>
+              <li>Database Management</li>
+              <li>Report Preparation</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h4 class="skill-cat-title">MICROSOFT OFFICE</h4>
+            <ul>
+              <li>Microsoft Word</li>
+              <li>Microsoft Excel</li>
+              <li>Microsoft PowerPoint</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h4 class="skill-cat-title">TOOLS</h4>
+            <ul>
+              <li>VS Code</li>
+              <li>Figma</li>
+              <li>Microsoft Office</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2: SERVICES -->
+      <div class="card-box services-card">
+        <div class="card-title-row">
+          <h3>SERVICES</h3>
+          <span class="plus-symbol">+</span>
+        </div>
+
+        <div class="services-list-grid">
+          <div class="service-block">
+            <div class="service-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <h4 class="serv-title">WEB DEVELOPMENT</h4>
+            <p class="serv-desc">Membangun website modern, menarik dan responsif untuk bisnis Anda.</p>
+          </div>
+
+          <div class="service-block">
+            <div class="service-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L11 18l7-5z"/>
+              </svg>
+            </div>
+            <h4 class="serv-title">UI/UX DESIGN</h4>
+            <p class="serv-desc">Merancang antarmuka yang menarik dan user-friendly.</p>
+          </div>
+
+          <div class="service-block">
+            <div class="service-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+            </div>
+            <h4 class="serv-title">LANDING PAGE</h4>
+            <p class="serv-desc">Landing page yang fokus pada konversi dan performa.</p>
+          </div>
+
+          <div class="service-block">
+            <div class="service-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+              </svg>
+            </div>
+            <h4 class="serv-title">MAINTENANCE</h4>
+            <p class="serv-desc">Perawatan website agar tetap aman, cepat dan up-to-date.</p>
+          </div>
+
+          <div class="service-block">
+            <div class="service-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"/>
+                <line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
+            </div>
+            <h4 class="serv-title">SEO OPTIMIZATION</h4>
+            <p class="serv-desc">Optimasi SEO untuk meningkatkan visibilitas di mesin pencari.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Row 4: FEATURED WORK | TESTIMONIALS -->
+    <section class="row-4-section">
+
+      <!-- Column 1: FEATURED WORK -->
+      <div class="card-box featured-work-card">
+        <div class="card-title-row">
+          <h3>FEATURED WORK</h3>
+          <span class="plus-symbol">+</span>
+        </div>
+
+        <div class="featured-work-body">
+          <div class="laptop-showcase-box">
+            <div class="browser-frame">
+              <div class="browser-header">
+                <div class="browser-dots">
+                  <span class="b-dot red"></span>
+                  <span class="b-dot yellow"></span>
+                  <span class="b-dot green"></span>
+                </div>
+              </div>
+              <div class="browser-screen-content">
+                <img src="./assets/robot_dev.svg" alt="Animated Robot Developer Working on Website Project">
+                <div class="screen-overlay-badge">
+                  <span class="live-dot"></span> AI ROBOT DEV WORKING
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="featured-details">
+            <div class="case-study-header">
+              <a href="#" class="view-case-link">VIEW CASE STUDY &rarr;</a>
+            </div>
+
+            <h3 class="feat-project-title">COMPANY WEBSITE MANAGEMENT</h3>
+
+            <div class="feat-meta-row">
+              <span>WEBSITE DEVELOPMENT & ADMIN</span>
+              <span>2026</span>
+            </div>
+
+            <p class="feat-desc">
+              Managed and maintained company websites, ensuring content accuracy, structured documentation, and smooth website operations while collaborating with cross-functional teams.
+            </p>
+
+            <div class="tech-used-block">
+              <span class="tech-label">TECHNOLOGIES</span>
+              <div class="tech-tags-list">
+                <span>WordPress</span>
+                <span>CMS</span>
+                <span>VS Code</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2: TESTIMONIALS -->
+      <div class="card-box testimonials-card">
+        <div class="card-title-row">
+          <h3>TESTIMONIALS</h3>
+          <div class="testi-controls">
+            <span class="plus-symbol">+</span>
+          </div>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testi-item">
+            <span class="quote-mark">“</span>
+            <div class="stars-row">★★★★★</div>
+            <p class="testi-text">
+              "Rudi bekerja sangat profesional, hasilnya melebihi ekspektasi dan komunikasinya sangat baik."
+            </p>
+            <span class="client-info">&mdash; CEO, Tech Startup</span>
+          </div>
+
+          <div class="testi-item">
+            <span class="quote-mark">“</span>
+            <div class="stars-row">★★★★★</div>
+            <p class="testi-text">
+              "Desainnya modern, rapi, dan website berjalan sangat cepat. Highly recommended!"
+            </p>
+            <span class="client-info">&mdash; Founder, Digital Agency</span>
+          </div>
+
+          <div class="testi-item">
+            <span class="quote-mark">“</span>
+            <div class="stars-row">★★★★★</div>
+            <p class="testi-text">
+              "Pekerjaan selesai tepat waktu, kualitas code bersih dan mudah dikembangkan."
+            </p>
+            <span class="client-info">&mdash; Product Manager</span>
+          </div>
+        </div>
+
+        <div class="testi-arrows-row">
+          <button class="arrow-btn">&larr;</button>
+          <button class="arrow-btn">&rarr;</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Footer / Let's Build Section -->
+    <footer id="contact" class="footer-cta-section">
+      <div class="footer-cta-top">
+        <div class="cta-left">
+          <h2 class="cta-headline">LET'S BUILD<br>SOMETHING AMAZING.</h2>
+          <p class="cta-subtext">Punya proyek menarik? Mari bekerja sama dan wujudkan ide Anda menjadi nyata.</p>
+        </div>
+
+        <div class="cta-middle-info">
+          <!-- EMAIL BUTTON CARD -->
+          <a href="mailto:ardihamzah261199@gmail.com" class="contact-card-btn">
+            <div class="contact-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="contact-text-box">
+              <span class="contact-card-label">EMAIL ME</span>
+              <span class="contact-card-val">ardihamzah261199@gmail.com</span>
+            </div>
+          </a>
+
+          <!-- WHATSAPP BUTTON CARD -->
+          <a href="https://wa.me/6285850495733" target="_blank" class="contact-card-btn">
+            <div class="contact-icon-box icon-green">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="contact-text-box">
+              <span class="contact-card-label">WHATSAPP</span>
+              <span class="contact-card-val">+62 858-5049-5733</span>
+            </div>
+          </a>
+
+          <!-- LOCATION BUTTON CARD -->
+          <div class="contact-card-btn static">
+            <div class="contact-icon-box icon-purple">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="contact-text-box">
+              <span class="contact-card-label">LOCATION</span>
+              <span class="contact-card-val">Sidoarjo, Indonesia</span>
+            </div>
+          </div>
+
+          <!-- FREELANCE BUTTON CARD -->
+          <div class="contact-card-btn static">
+            <div class="contact-icon-box icon-amber">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="contact-text-box">
+              <span class="contact-card-label">FREELANCE STATUS</span>
+              <span class="contact-card-val status-avail">Available for Hire <span class="green-dot"></span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-right-btn">
+          <a href="#contact" class="btn-start-project">
+            <span>START A PROJECT</span>
+            <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span class="copy-text">&copy; 2026 RUDI ARDI HAMZAH. ALL RIGHTS RESERVED.</span>
+        <span class="passion-text">BUILT WITH PASSION &bull; FOCUSED ON QUALITY</span>
+        <a href="#home" class="back-to-top">BACK TO TOP &uarr;</a>
+      </div>
+    </footer>
+
+    <!-- Runway Spacer -->
+    <div class="footer-spacer"></div>
+
+  </div>
+
+  <!-- POPUP MODAL LIGHTBOX FOR PORTFOLIO DETAILS -->
+  <div id="project-modal" class="modal-overlay">
+    <div class="modal-card">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      
+      <div class="modal-body">
+        <div class="modal-img-container">
+          <img id="modal-img" src="" alt="Project Image Preview">
+        </div>
+
+        <div class="modal-details">
+          <div class="modal-header-meta">
+            <span id="modal-num" class="modal-num">01</span>
+            <span id="modal-category" class="modal-category">CATEGORY</span>
+          </div>
+
+          <h2 id="modal-title" class="modal-title">PROJECT TITLE</h2>
+
+          <div class="modal-divider"></div>
+
+          <p id="modal-description" class="modal-description">
+            Detailed project explanation text goes here...
+          </p>
+
+          <div class="modal-tech-stack">
+            <span class="tech-stack-title">TECHNOLOGIES & SKILLS</span>
+            <div id="modal-tags" class="modal-tags">
+              <!-- Dynamic tags -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive White Cat Cursor Follower -->
+  <div id="cat-cursor" class="cat-cursor-container">
+    <div class="cat-zzz-bubble">Zzz...</div>
+    <div class="cat-scared-bubble">MEOW! 🙀</div>
+    <div id="mini-chaser-robot" class="mini-chaser-robot">🤖⚡</div>
+    <svg class="cat-svg" viewBox="0 0 40 40" width="36" height="36">
+      <!-- Cat Body & Ears -->
+      <path class="cat-body-path" d="M12 28 C 12 18, 16 12, 20 12 C 24 12, 28 18, 28 28 C 28 32, 24 35, 20 35 C 16 35, 12 32, 12 28 Z" fill="#ffffff"/>
+      <!-- Left Ear -->
+      <polygon points="12,16 8,6 18,12" fill="#ffffff" stroke="#e0e0e0" stroke-width="0.5"/>
+      <polygon points="12,15 10,8 16,13" fill="#ffb6c1"/>
+      <!-- Right Ear -->
+      <polygon points="28,16 32,6 22,12" fill="#ffffff" stroke="#e0e0e0" stroke-width="0.5"/>
+      <polygon points="28,15 30,8 24,13" fill="#ffb6c1"/>
+      
+      <!-- Head Circle -->
+      <circle cx="20" cy="18" r="9" fill="#ffffff"/>
+
+      <!-- Awake Eyes -->
+      <g class="cat-eyes-awake">
+        <circle cx="16.5" cy="17" r="1.5" fill="#111111"/>
+        <circle cx="23.5" cy="17" r="1.5" fill="#111111"/>
+        <circle cx="17" cy="16.3" r="0.5" fill="#ffffff"/>
+        <circle cx="24" cy="16.3" r="0.5" fill="#ffffff"/>
+      </g>
+
+      <!-- Sleepy Eyes (Hidden when awake) -->
+      <g class="cat-eyes-sleepy">
+        <path d="M14.5 17.5 Q 16.5 19.5 18.5 17.5" fill="none" stroke="#222222" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M21.5 17.5 Q 23.5 19.5 25.5 17.5" fill="none" stroke="#222222" stroke-width="1.2" stroke-linecap="round"/>
+      </g>
+
+      <!-- Nose & Mouth -->
+      <polygon points="19.2,19.5 20.8,19.5 20,20.3" fill="#ff9999"/>
+      <path d="M18.8 21 C 19.5 22, 20.5 22, 21.2 21" fill="none" stroke="#444444" stroke-width="0.8" stroke-linecap="round"/>
+
+      <!-- Whiskers -->
+      <line x1="10" y1="18" x2="14" y2="18.5" stroke="#cccccc" stroke-width="0.8"/>
+      <line x1="10" y1="20" x2="14" y2="20" stroke="#cccccc" stroke-width="0.8"/>
+      <line x1="30" y1="18" x2="26" y2="18.5" stroke="#cccccc" stroke-width="0.8"/>
+      <line x1="30" y1="20" x2="26" y2="20" stroke="#cccccc" stroke-width="0.8"/>
+
+      <!-- Cute Tail -->
+      <path class="cat-tail" d="M26 31 Q 33 32 32 25 Q 31 20 34 18" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+  <!-- Fixed Mobile Bottom Navigation Bar -->
+  <nav class="mobile-bottom-bar" id="mobile-bottom-bar">
+    <a href="#home" class="bottom-nav-item active">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+      </svg>
+      <span>Beranda</span>
+    </a>
+    <a href="#about" class="bottom-nav-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+        <circle cx="12" cy="7" r="4"></circle>
+      </svg>
+      <span>Tentang</span>
+    </a>
+    <a href="#projects" class="bottom-nav-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+      </svg>
+      <span>Proyek</span>
+    </a>
+    <a href="#contact" class="bottom-nav-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+        <polyline points="22,6 12,13 2,6"></polyline>
+      </svg>
+      <span>Kontak</span>
+    </a>
+  </nav>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
